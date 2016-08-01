@@ -1,0 +1,12 @@
+<div class="content">
+    <div class="container">
+    <?php if (count($this->enrollees) > 0) :  ?>
+    <select data-placeholder="student_no">
+        <?php foreach ($this->enrollees as $student) : ?>
+            <option value="<?=$student['id'];?>"><?=$student['last_name']. ", " . $student['first_name']. " " . $student['middle_name'];?></option>
+        <?php endforeach; ?>
+        
+    </select>
+    <?php endif; ?>
+</div>
+</div>

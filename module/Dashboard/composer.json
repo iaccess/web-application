@@ -1,0 +1,59 @@
+{
+    "name": "codingmatters/dashboard-module-ini",
+    "description": "Initial Dashboard Module for ZF application",
+    "license": "MIT",
+    "type": "project",
+    "keywords": ["ZF module", "Dashboard"],
+    "homepage": "https://github.com/CodingMatters/DashboardModule/",
+    "authors": [
+        {
+            "name": "Gab Amba",
+            "email": "gamba@gabbydgab.com",
+            "homepage": "http://www.gabbydgab.com/"  
+        }
+    ],
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "roave/security-advisories": "dev-master",
+        "zendframework/zend-mvc": "^3.0.2",
+        "zendframework/zend-mvc-i18n": "^1.0",
+        "zendframework/zend-mvc-plugins": "^1.0.1",
+        "zendframework/zend-navigation": "^2.8.1"
+    },
+    "require-dev": {
+        "zendframework/zend-test": "^3.0",
+        "squizlabs/php_codesniffer": "^2.3",
+        "phpbench/phpbench": "^0.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dashboard\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DashboardTest\\": "test/"
+        }
+    },
+    "extra": {
+        "zf": {
+            "module": "Dashboard",
+            "config-provider": "Dashboard\\ConfigProvider"
+        }
+    },
+    "scripts": {
+        "post-install-cmd"  : [
+            "@check"
+        ],
+        "post-update-cmd"   : [            
+            "@check"
+        ],
+        "check": [
+            "@test",
+            "@cs" 
+        ],
+        "cs": "phpcs",
+        "cs-fix": "phpcbf",
+        "test": "phpunit"
+    }
+}

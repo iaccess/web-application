@@ -1,0 +1,11 @@
+--- module/Site/src/Controller/PageController.php
++++ PHP_CodeSniffer
+@@ -45,7 +45,7 @@
+     {
+         return new ViewModel();
+     }
+-    
++
+     public function academicsAction()
+     {
+         return new ViewModel();

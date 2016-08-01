@@ -1,0 +1,56 @@
+{
+    "name": "academaie/student",
+    "description": "Vanilla Integration of Managing Student Information for Academe Systems",
+    "license": "MIT",
+    "type": "project",
+    "keywords": ["ZF module"],
+    "homepage": "https://github.com/CodingMatters/ZFModuleIni/",
+    "authors": [
+        {
+            "name": "Gab Amba",
+            "email": "gamba@gabbydgab.com",
+            "homepage": "http://www.gabbydgab.com/"
+        }
+    ],
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "roave/security-advisories": "dev-master"
+    },
+    "require-dev": {        
+        "zendframework/zend-test": "^3.0",
+        "squizlabs/php_codesniffer": "^2.3",
+        "phpbench/phpbench": "^0.11",
+        "fzaninotto/faker": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Student\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "StudentTest\\": "test/"
+        }
+    },
+    "extra": {        
+        "zf": {
+            "module": "Student",
+            "config-provider": "Student\\ConfigProvider"
+        }
+    },
+    "scripts": {
+        "post-install-cmd"  : [            
+            "@check"
+        ],
+        "post-update-cmd"   : [            
+            "@check"
+        ],
+        "check": [
+            "@test",
+            "@cs" 
+        ],
+        "cs": "phpcs",
+        "cs-fix": "phpcbf",
+        "test": "phpunit"
+    }
+}
