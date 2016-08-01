@@ -11,13 +11,11 @@
         }
     ],
     "require": {
-        "php": "^5.6 || ^7.0",
+        "php": "^7.0",
         "roave/security-advisories": "dev-master",
-        "zendframework/zend-component-installer": "^1.0 || ^0.3",
+        "zendframework/zend-component-installer": "^1.0 || ~0.3",
         "zendframework/zend-mvc": "^3.0.2",
-        "zendframework/zend-navigation": "^2.8.1",
-        "zendframework/zend-db": "^2.8.1",
-        "tesda/tvet-program-prospectus": "dev-develop"
+        "iaccess/official-website": "^1.0 || ~0.1 || dev-develop"
     },
     "require-dev": {
         "zendframework/zend-test": "^3.0.1",
@@ -31,17 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Application\\": "module/Application/src/",
-            "Site\\": "module/Site/src/",
-            "Dashboard\\": "module/Dashboard/src/",
-            "Student\\": "module/Student/src/"
+            "Application\\": "module/Application/src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ApplicationTest\\": "module/Application/test/",
-            "Site\\IntegrationTest\\": "module/Site/test/Integration/",
-            "Dashboard\\IntegrationTest\\": "module/Dashboard/test/Integration/"            
+            "ApplicationTest\\": "module/Application/test/"
         }
     },
     "scripts": {
